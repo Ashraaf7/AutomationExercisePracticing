@@ -17,7 +17,7 @@
 * Native Selenium Web driver
 * TestNG Framework
 * Page Object Model design pattern and Fluent pattern.
-* Data Driven framework.
+* DDT for reading data from external files.
 * CI/CD pipeline When a commit is made to the master branch, when PR's created, Run daily at 6 am with Egypt time, Attaching reports as artifacts, and Attaching result as a comment on PR and on summary
   <table>
 <thead>
