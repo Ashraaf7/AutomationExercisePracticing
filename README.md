@@ -18,14 +18,8 @@
 * TestNG Framework
 * Page Object Model design pattern and Fluent pattern.
 * Data Driven framework.
-* CI/CD pipeline using GitHub Actions
-    * When a PR is created
-    * When a commit is made to the master branch
-    * Daily at 6 am with Egypt time
-    * Attaching reports as artifacts
-    * Attaching result as a comment on pr and on summary
+* CI/CD pipeline When a commit is made to the master branch, when PR's created, Run daily at 6 am with Egypt time, Attaching reports as artifacts, and Attaching result as a comment on PR and on summary
   <table>
-
 <thead>
 <tr>
 <th align="center">Symbol</th>
