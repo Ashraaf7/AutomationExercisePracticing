@@ -5,6 +5,8 @@ import com.assertthat.selenium_shutterbug.core.Shutterbug;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
 import java.io.FileOutputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -47,6 +49,21 @@ public class ScreenshotsUtils
             Files.createDirectories(path.getParent());
             FileOutputStream out = new FileOutputStream(path.toString());
             Shutterbug.shootPage(driver, Capture.FULL,true).save(String.valueOf(out));
+            return out;
+        }
+        catch (Exception e) {
+            LogUtils.error(e.getMessage());
+            return null;
+        }
+    }
+    //create method to Take screenshot of specified WebElement only
+    public static FileOutputStream captureWebElementScreenshots(WebDriver driver, WebElement element) {
+
+        path = Paths.get("test-outputs/screenshots",element+".png");
+        try {
+            Files.createDirectories(path.getParent());
+            FileOutputStream out = new FileOutputStream(path.toString());
+            Shutterbug.shootElement(driver, element).save();
             return out;
         }
         catch (Exception e) {
