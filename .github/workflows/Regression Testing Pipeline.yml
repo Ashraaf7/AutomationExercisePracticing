@@ -2,14 +2,16 @@ name: Regression Testing Pipeline
 
 on:
   push:
-    branches: [ "master" ]
+    branches: 
+      - master
   pull_request:
-    branches: [ master ]
+    branches: 
+      - master
   schedule:
     - cron: '00 4 * * *'
 
 env:
-  env: "%regex[.*Test.*],com.automationexercise.tests.**
+  env: "%regex[.*Test.*],com.automationexercise.tests.**"
 
 jobs:
   EdgeOnWindows:
@@ -26,12 +28,11 @@ jobs:
         uses: actions/setup-java@v4
         with:
           distribution: 'oracle'
-          java-version: '21'
+          java-version: 21
       - name: Set up Maven
         uses: stCarolas/setup-maven@v5
         with:
-          maven-version: 3.9.6
-
+          java-version: 3.9.6
       - name: Run Tests
         continue-on-error: true
         run: mvn -Dtest="${env}" clean test
@@ -47,17 +48,14 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
       - name: Setup JDK 21
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v5
         with:
           distribution: 'oracle'
-          java-version: '21'
+          java-version: 21
       - name: Set up Maven
         uses: stCarolas/setup-maven@v5
         with:
-          maven-version: 3.9.6
-
+          java-version: 3.9.6
       - name: Run Tests
         continue-on-error: true
         run: mvn -Dtest="${env}" clean test
-
-  
