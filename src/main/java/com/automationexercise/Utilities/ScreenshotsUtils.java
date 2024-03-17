@@ -1,13 +1,8 @@
 package com.automationexercise.Utilities;
 
-import com.assertthat.selenium_shutterbug.core.Capture;
-import com.assertthat.selenium_shutterbug.core.Shutterbug;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-
-import java.io.FileOutputStream;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.*;
+import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -15,7 +10,7 @@ import java.nio.file.Paths;
 public class ScreenshotsUtils
 {
     private static Path path ;
-
+    private static String screenshotPath = "test-outputs/screenshots";
     public Path getPath()
     {
         return path;
@@ -25,50 +20,66 @@ public class ScreenshotsUtils
     {
         this.path = path;
     }
+    public static String getScreenshotPath()
+    {
+        return screenshotPath;
+    }
+
+    public static void setScreenshotPath(String screenshotPath)
+    {
+        ScreenshotsUtils.screenshotPath = screenshotPath;
+    }
     //create method to Take screenshot
-    public static FileOutputStream captureScreenshot(WebDriver driver, String screenshotname) {
-
-         path = Paths.get("test-outputs/screenshots",screenshotname+".png");
+    public static File captureScreenshot(WebDriver driver, String screenshotName) {
+         path = Paths.get(screenshotPath,screenshotName+".png");
         try {
             Files.createDirectories(path.getParent());
-            FileOutputStream out = new FileOutputStream(path.toString());
-            out.write(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES));
-            out.close();
-            return out;
+            File screenshotSrc= ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+            File screenshotFile = new File(path.toString());
+            FileUtils.copyFile(screenshotSrc,screenshotFile);
+            return screenshotFile;
         }
         catch (Exception e) {
             LogUtils.error(e.getMessage());
             return null;
         }
     }
-    //create method to Take screenshot of the whole page
-    public static FileOutputStream captureFullScreenshot(WebDriver driver, String screenshotname) {
-
-        path = Paths.get("test-outputs/screenshots",screenshotname+".png");
+    //create method to Take screenshot for element
+    public static File captureScreenshotForElement(WebDriver driver, String screenshotName,By locator) {
+        path = Paths.get(screenshotPath,screenshotName+".png");
         try {
             Files.createDirectories(path.getParent());
-            FileOutputStream out = new FileOutputStream(path.toString());
-            Shutterbug.shootPage(driver, Capture.FULL,true).save(String.valueOf(out));
-            return out;
+            File screenshotSrc= ((TakesScreenshot) driver.findElement(locator)).getScreenshotAs(OutputType.FILE);
+            File screenshotFile = new File(path.toString());
+            FileUtils.copyFile(screenshotSrc,screenshotFile);
+            return screenshotFile;
         }
         catch (Exception e) {
             LogUtils.error(e.getMessage());
             return null;
         }
     }
-    //create method to Take screenshot of specified WebElement only
-    public static FileOutputStream captureWebElementScreenshots(WebDriver driver, WebElement element) {
-
-        path = Paths.get("test-outputs/screenshots",element+".png");
-        try {
+    //create method to Take screenshot with high lighting element
+    public static File takeScreenshotWithHighlighting(WebDriver driver, String screenshotName, By locator) {
+         path = Paths.get(screenshotPath,screenshotName+".png");
+         try {
+            highLightElement(driver,locator);
             Files.createDirectories(path.getParent());
-            FileOutputStream out = new FileOutputStream(path.toString());
-            Shutterbug.shootElement(driver, element).save();
-            return out;
+             File screenshotSrc= ((TakesScreenshot) driver.findElement(locator)).getScreenshotAs(OutputType.FILE);
+             File screenshotFile = new File(path.toString());
+             FileUtils.copyFile(screenshotSrc,screenshotFile);
+            return screenshotFile;
         }
         catch (Exception e) {
             LogUtils.error(e.getMessage());
             return null;
+        }
+    }
+    public static void highLightElement(WebDriver driver,By by) {
+        // draw a border around the found element
+        if (driver instanceof JavascriptExecutor) {
+            ((JavascriptExecutor) driver).executeScript("arguments[0].style.border='3px solid red'", driver, by);
+            LogUtils.info("Highlight on element " + by);
         }
     }
 }
