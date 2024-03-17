@@ -10,7 +10,8 @@ import java.nio.file.Paths;
 public class ScreenshotsUtils
 {
     private static Path path ;
-    private static String screenshotPath = "test-outputs/screenshots";
+    private static String SCREENSHOTS_PATH = "test-outputs/screenshots";
+
     public Path getPath()
     {
         return path;
@@ -20,18 +21,17 @@ public class ScreenshotsUtils
     {
         this.path = path;
     }
-    public static String getScreenshotPath()
+    public static String getScreenshotsPath()
     {
-        return screenshotPath;
+        return SCREENSHOTS_PATH;
     }
-
-    public static void setScreenshotPath(String screenshotPath)
+    public static void setScreenshotsPath(String screenshotsPath)
     {
-        ScreenshotsUtils.screenshotPath = screenshotPath;
+        SCREENSHOTS_PATH = screenshotsPath;
     }
     //create method to Take screenshot
     public static File captureScreenshot(WebDriver driver, String screenshotName) {
-         path = Paths.get(screenshotPath,screenshotName+".png");
+         path = Paths.get(SCREENSHOTS_PATH,screenshotName+".png");
         try {
             Files.createDirectories(path.getParent());
             File screenshotSrc= ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
@@ -46,7 +46,7 @@ public class ScreenshotsUtils
     }
     //create method to Take screenshot for element
     public static File captureScreenshotForElement(WebDriver driver, String screenshotName,By locator) {
-        path = Paths.get(screenshotPath,screenshotName+".png");
+        path = Paths.get(SCREENSHOTS_PATH,screenshotName+".png");
         try {
             Files.createDirectories(path.getParent());
             File screenshotSrc= ((TakesScreenshot) driver.findElement(locator)).getScreenshotAs(OutputType.FILE);
@@ -59,9 +59,9 @@ public class ScreenshotsUtils
             return null;
         }
     }
-    //create method to Take screenshot with high lighting element
+    //create method to Take screenshot with highlighting element
     public static File takeScreenshotWithHighlighting(WebDriver driver, String screenshotName, By locator) {
-         path = Paths.get(screenshotPath,screenshotName+".png");
+         path = Paths.get(SCREENSHOTS_PATH,screenshotName+".png");
          try {
             highLightElement(driver,locator);
             Files.createDirectories(path.getParent());
