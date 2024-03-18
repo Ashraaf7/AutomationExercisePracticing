@@ -1,8 +1,7 @@
 # Test Automation Framework for Automation Exercise Demo Project
-[![E2E Regression Testing](https://github.com/Ashraaf7/AutomationExercisePracticing/actions/workflows/E2E%20Regression%20Testing.yml/badge.svg)](https://github.com/Ashraaf7/AutomationExercisePracticing/actions/workflows/E2E%20Regression%20Testing.yml)
+[![Regression Testing Pipeline](https://github.com/Ashraaf7/AutomationExercisePracticing/actions/workflows/Regression%20Testing%20Pipeline.yml/badge.svg)](https://github.com/Ashraaf7/AutomationExercisePracticing/actions/workflows/Regression%20Testing%20Pipeline.yml)
 
 ### Website :
-
 * [Automation Exercise](https://automationexercise.com/test_cases) <br><img title="Automation Exercise" src="https://automationexercise.com/static/images/home/logo.png">
 
 ## Project Details:
@@ -17,15 +16,9 @@
 * Native Selenium Web driver
 * TestNG Framework
 * Page Object Model design pattern and Fluent pattern.
-* Data Driven framework.
-* CI/CD pipeline using GitHub Actions
-    * When a PR is created
-    * When a commit is made to the master branch
-    * Daily at 6 am with Egypt time
-    * Attaching reports as artifacts
-    * Attaching result as a comment on pr and on summary
+* DDT for reading data from external files.
+* CI/CD pipeline When a commit is made to the master branch, when PR's created, Run daily at 6 am with Egypt time, Attaching reports as artifacts, and Attaching result as a comment on PR and on summary
   <table>
-
 <thead>
 <tr>
 <th align="center">Symbol</th>
