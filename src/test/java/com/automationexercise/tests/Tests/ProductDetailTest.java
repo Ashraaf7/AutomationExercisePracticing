@@ -15,9 +15,10 @@ import static com.automationexercise.Utilities.Utility.openWebsite;
 public class ProductDetailTest {
     @Test
     public void homePageTest() throws InterruptedException {
-    new ProductDetailPage(getDriver())
-            .changeQuantity(4)
-            .addToCart();
-    Thread.sleep(2000);
+        new ProductDetailPage(getDriver())
+                .changeQuantity(4)
+                .addToCart()
+                .clickViewCart();
+        Thread.sleep(2000);
     }
 }

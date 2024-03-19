@@ -22,14 +22,11 @@ public class HomePageTest {
     public void setUp() {
         createInstance("chrome");
         openWebsite("https://www.automationexercise.com/");
-        homePage = new HomePage(getDriver());
     }
     @AfterTest
     public void tearDown() {quit();}
     @Test
     public void homePageTest() {
-        homePage.isHomePagePresent();
-        homePage.click2ndProduct();
-
+        new HomePage(getDriver()).isHomePagePresent();new HomePage(getDriver()).click2ndProduct();
     }
 }

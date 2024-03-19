@@ -6,6 +6,7 @@
         <classes>
             <class name="com.automationexercise.tests.Tests.HomePageTest"></class>
             <class name="com.automationexercise.tests.Tests.ProductDetailTest"></class>
+            <class name="com.automationexercise.tests.Tests.CheckOutTest"></class>
         </classes>
     </test>
 </suite>
