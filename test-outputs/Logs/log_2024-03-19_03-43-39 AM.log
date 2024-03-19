@@ -1,0 +1,2 @@
+[INFO] 19-03-2024 03:43:43 [main] [com.automationexercise.Utilities.Utility.openWebsite(Utility.java:201)] - Open website with URL: https://automationexercise.com/
+[INFO] 19-03-2024 03:43:44 [main] [com.automationexercise.Utilities.Utility.verifyElementVisible(Utility.java:83)] - Verify element visible By.cssSelector: #slider-carousel > div
