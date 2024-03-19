@@ -1,26 +1,29 @@
 package com.automationexercise.Pages;
 
+import com.automationexercise.Utilities.Utility;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class HomePage extends BasePage {
-    public  HomePage(WebDriver driver) {
-        super(driver);
+import static com.automationexercise.Utilities.Utility.clicking;
+import static com.automationexercise.Utilities.Utility.verifyElementVisible;
+
+
+public class HomePage {
+
+    private final WebDriver driver;
+    private final By testcasebtn_ele = By.xpath("(//a[@href=\"/test_cases\"])[1]");
+
+
+    public HomePage(WebDriver driver) {
+        this.driver = driver;
     }
-
-    private By testcasebtn_ele = By.xpath("(//a[@href=\"/test_cases\"])[1]");
-    public TestCasesPage ClickOnTestCases() {
-        driver.findElement(testcasebtn_ele).click();
+    public TestCasesPage clickOnTestCases() {
+        clicking(driver, testcasebtn_ele);
         return new TestCasesPage(driver);
     }
 
     public boolean isHomePageVisible() {
-        WebElement element = driver.findElement(testcasebtn_ele);
-        WebDriverWait wait = new WebDriverWait(driver, java.time.Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.visibilityOf(element));
-        return element.isDisplayed();
+        verifyElementVisible(testcasebtn_ele);
+        return true;
     }
 }
