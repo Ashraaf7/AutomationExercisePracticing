@@ -9,7 +9,7 @@ import static com.automationexercise.Utilities.Utility.getText;
 
 public class CheckOutPage {
     private WebDriver driver;
-    private final By quantity= By.xpath("//button[normalize-space()='1']");
+    private final By quantity= By.xpath("(//button[@class='disabled'])[1]");
     public CheckOutPage(WebDriver driver) {
         this.driver = driver;
     }

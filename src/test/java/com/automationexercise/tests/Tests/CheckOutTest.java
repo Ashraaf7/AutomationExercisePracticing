@@ -11,7 +11,7 @@ public class CheckOutTest {
     @Test
     public void homePageTest() throws InterruptedException {
         String quantity = new CheckOutPage(getDriver()).checkOutQuantity();
-        Assert.assertEquals(quantity,4);
+        Assert.assertEquals(quantity,"4");
         Thread.sleep(2000);
     }
 }
