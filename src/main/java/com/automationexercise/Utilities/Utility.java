@@ -200,4 +200,23 @@ public class Utility {
         implicitlyWait();
         LogUtils.info("Open website with URL: " + URL);
     }
+
+    /**
+     * Extract the numbers out of an alphanumeric string
+     * @param "string" contains a mix of characters and numbers
+     * @return pure float number
+     */
+    public static float extractFloat(String alphanumericString) {
+        // Split the input string into an array of strings
+        String[] chunks = alphanumericString.split("\\s+"); // "\\s" indicates any white space character (like spaces, tabs, and line breaks)
+        for (String word : chunks) {
+            try {
+                return Float.parseFloat(word);
+            } catch (NumberFormatException e) {
+                // If parsing fails, continue to the next word
+            }//end catch
+        }//end for loop
+        return 0.0f; // Return 0.0f if no number is found
+    } //end method extractFloat(String alphanumericString)
+
 }
