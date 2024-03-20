@@ -1,0 +1,3 @@
+[INFO] 20-03-2024 11:13:28 [main] [com.automationexercise.Utilities.Utility.openWebsite(Utility.java:201)] - Open website with URL: https://automationexercise.com/
+[INFO] 20-03-2024 11:13:28 [main] [com.automationexercise.Utilities.Utility.verifyElementVisible(Utility.java:83)] - Verify element visible By.xpath: (//a[@href="/test_cases"])[1]
+[INFO] 20-03-2024 11:13:31 [main] [com.automationexercise.Utilities.Utility.verifyElementVisible(Utility.java:83)] - Verify element visible By.className: row

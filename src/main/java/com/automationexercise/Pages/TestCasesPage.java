@@ -12,13 +12,12 @@ import static com.automationexercise.Utilities.Utility.verifyElementVisible;
 
 public class TestCasesPage {
     private final WebDriver driver;
-    private final By verification_ele =  By.xpath("//*[@id=\"form\"]/div/div[2]/h5/span");
-
+    private final By verifyElementVisible =  By.className("row");
     public TestCasesPage(WebDriver driver) {
         this.driver = driver;
     }
     public boolean isTestCasesPageVisible() {
-        verifyElementVisible(verification_ele);
-        return true;
+
+        return verifyElementVisible(verifyElementVisible);
     }
 }
