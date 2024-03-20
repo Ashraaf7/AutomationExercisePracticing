@@ -200,4 +200,9 @@ public class Utility {
         implicitlyWait();
         LogUtils.info("Open website with URL: " + URL);
     }
+
+    public static boolean verifyEquals(By locator, String ExpectedText)
+    {
+        return getText(getDriver(), locator).equals(ExpectedText);
+    }
 }
