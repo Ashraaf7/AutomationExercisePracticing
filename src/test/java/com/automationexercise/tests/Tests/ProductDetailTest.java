@@ -19,10 +19,14 @@ public class ProductDetailTest {
     String BASE_URL = getJsonData("data","PRODUCTDETAILSPAGE");
     @Test
     public void homePageTest() throws InterruptedException {
+        System.out.println(getDriver().getCurrentUrl());
+        System.out.println(BASE_URL);
+        Assert.assertEquals(getDriver().getCurrentUrl(), BASE_URL);
         new ProductDetailPage(getDriver())
                 .changeQuantity(4)
                 .addToCart()
                 .clickViewCart();
+
         Thread.sleep(2000);
     }
 }
