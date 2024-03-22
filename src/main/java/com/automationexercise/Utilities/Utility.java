@@ -38,7 +38,6 @@ public class Utility {
 
     }
 
-
     public static String getTimestamp() {
         return new SimpleDateFormat("yyyy-MM-dd_h-m-ssa").format(new Date());
     }
@@ -200,4 +199,9 @@ public class Utility {
         implicitlyWait();
         LogUtils.info("Open website with URL: " + URL);
     }
+
+    public static boolean verifyEquals(By locator, String expectedText) {
+        return getText(getDriver(), locator).equals(expectedText);
+    }
+
 }
