@@ -36,7 +36,7 @@ public enum BrowserFactory {
             options.addArguments("--disable-infobars");
             options.addArguments("--disable-notifications");
             options.addArguments("--remote-allow-origins=*");
-
+            options.addArguments("--headless");
             options.setAcceptInsecureCerts(true);
 
             return options;
