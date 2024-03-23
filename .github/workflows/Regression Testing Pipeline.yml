@@ -32,7 +32,7 @@ jobs:
       - name: Set up Maven
         uses: stCarolas/setup-maven@v5
         with:
-          java-version: 3.9.6
+          maven-version: 3.9.6
       - name: Run Tests
         continue-on-error: true
         run: mvn -Dtest="${env}" clean test
@@ -55,7 +55,7 @@ jobs:
       - name: Set up Maven
         uses: stCarolas/setup-maven@v5
         with:
-          java-version: 3.9.6
+          maven-version: 3.9.6
       - name: Run Tests
         continue-on-error: true
         run: mvn -Dtest="${env}" clean test

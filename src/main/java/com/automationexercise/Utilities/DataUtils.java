@@ -11,6 +11,8 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class DataUtils {
+    public final static String CONFIG_PATH = "src/test/resources/config/";
+
     public final static String TEST_DATA_PATH = "src/test/resources/test-data/";
     public final static String ENVIRONMENT_PATH = "src/test/resources/test-data/environment.properties";
 
@@ -74,5 +76,17 @@ public class DataUtils {
             return "";
         }
 
+    }
+
+    //TODO: get properties from any .properties file
+    public static String getConfigValue(String fileName, String key) {
+        try {
+            Properties properties = new Properties();
+            properties.load(new FileInputStream(CONFIG_PATH + fileName + ".properties"));
+            return properties.getProperty(key);
+        } catch (Exception e) {
+            LogUtils.error(e.getMessage());
+            return "";
+        }
     }
 }
