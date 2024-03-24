@@ -1,0 +1,1 @@
+[ERROR] 19-03-2024 07:06:03 [main] [com.automationexercise.Utilities.Utility.verifyElementVisible(Utility.java:86)] - Cannot invoke "org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)" because "driver" is null

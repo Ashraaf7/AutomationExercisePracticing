@@ -1,0 +1,2 @@
+[INFO] 19-03-2024 04:48:19 [main] [com.automationexercise.Utilities.Utility.openWebsite(Utility.java:201)] - Open website with URL: https://automationexercise.com/
+[INFO] 19-03-2024 04:48:19 [main] [com.automationexercise.Utilities.Utility.verifyElementVisible(Utility.java:83)] - Verify element visible By.xpath: (//a[@href="/test_cases"])[1]

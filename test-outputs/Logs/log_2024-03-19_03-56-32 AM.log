@@ -1,0 +1,2 @@
+[INFO] 19-03-2024 03:56:32 [main] [com.automationexercise.Utilities.Utility.verifyElementVisible(Utility.java:83)] - Verify element visible By.xpath: (//a[@href="/test_cases"])[1]
+[INFO] 19-03-2024 03:56:36 [main] [com.automationexercise.Utilities.Utility.verifyElementVisible(Utility.java:83)] - Verify element visible By.xpath: //*[@id="form"]/div/div[2]/h5/span

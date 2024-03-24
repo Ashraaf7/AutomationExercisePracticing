@@ -1,0 +1,2 @@
+[INFO] 19-03-2024 04:38:47 [main] [com.automationexercise.Utilities.Utility.openWebsite(Utility.java:201)] - Open website with URL: https://automationexercise.com/
+[ERROR] 19-03-2024 04:38:52 [main] [com.automationexercise.Utilities.Utility.verifyElementVisible(Utility.java:86)] - Expected condition failed: waiting for visibility of element located by By.xpath: (//a[@href="/test_cases"])[1] (tried for 5 second(s) with 500 milliseconds interval)
