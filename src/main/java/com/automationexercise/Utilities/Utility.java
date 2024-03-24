@@ -18,6 +18,8 @@ import static com.automationexercise.Utilities.WaitsUtils.*;
 public class Utility {
 
 
+
+
     //TODO: Clicking on element after checking clickability
     public static void clicking(WebDriver driver, By locator) {
         explicitlyWaitForClickability(driver, locator);
@@ -36,6 +38,9 @@ public class Utility {
                 .until(ExpectedConditions.visibilityOfElementLocated(locator));
         return findWebElement(driver, locator).getText();
 
+    }
+    public static boolean verifyEquals(By locator, String expectedText) {
+        return getText(getDriver(), locator).equals(expectedText);
     }
 
 

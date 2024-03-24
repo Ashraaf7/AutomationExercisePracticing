@@ -31,7 +31,7 @@ public class ScreenshotsUtils
     }
     //create method to Take screenshot
     public static File captureScreenshot(WebDriver driver, String screenshotName) {
-         path = Paths.get(SCREENSHOTS_PATH,screenshotName+".png");
+         path = Paths.get(SCREENSHOTS_PATH,screenshotName+"_"+ Utility.getTimestamp()+".png");
         try {
             Files.createDirectories(path.getParent());
             File screenshotSrc= ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
@@ -46,10 +46,10 @@ public class ScreenshotsUtils
     }
     //create method to Take screenshot for element
     public static File captureScreenshotForElement(WebDriver driver, String screenshotName,By locator) {
-        path = Paths.get(SCREENSHOTS_PATH,screenshotName+".png");
+        path = Paths.get(SCREENSHOTS_PATH,screenshotName+"_"+ Utility.getTimestamp()+".png");
         try {
             Files.createDirectories(path.getParent());
-            File screenshotSrc= ((TakesScreenshot) driver.findElement(locator)).getScreenshotAs(OutputType.FILE);
+            File screenshotSrc= ((TakesScreenshot) Utility.findWebElement(driver,locator)).getScreenshotAs(OutputType.FILE);
             File screenshotFile = new File(path.toString());
             FileUtils.copyFile(screenshotSrc,screenshotFile);
             return screenshotFile;
@@ -61,11 +61,11 @@ public class ScreenshotsUtils
     }
     //create method to Take screenshot with highlighting element
     public static File takeScreenshotWithHighlighting(WebDriver driver, String screenshotName, By locator) {
-         path = Paths.get(SCREENSHOTS_PATH,screenshotName+".png");
+        path = Paths.get(SCREENSHOTS_PATH,screenshotName+"_"+ Utility.getTimestamp()+".png");
          try {
             highLightElement(driver,locator);
             Files.createDirectories(path.getParent());
-             File screenshotSrc= ((TakesScreenshot) driver.findElement(locator)).getScreenshotAs(OutputType.FILE);
+             File screenshotSrc= ((TakesScreenshot) Utility.findWebElement(driver,locator)).getScreenshotAs(OutputType.FILE);
              File screenshotFile = new File(path.toString());
              FileUtils.copyFile(screenshotSrc,screenshotFile);
             return screenshotFile;

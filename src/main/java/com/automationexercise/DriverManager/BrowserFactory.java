@@ -36,7 +36,9 @@ public enum BrowserFactory {
             options.addArguments("--disable-infobars");
             options.addArguments("--disable-notifications");
             options.addArguments("--remote-allow-origins=*");
-
+            options.addArguments("--remote-debugging-pipe");
+            if (System.getProperty("headless") != null)
+                options.addArguments("--headless=new");
             options.setAcceptInsecureCerts(true);
 
             return options;
@@ -51,6 +53,9 @@ public enum BrowserFactory {
         public FirefoxOptions getOptions() {
             FirefoxOptions options = new FirefoxOptions();
             options.addArguments("--start-maximized");
+            options.addArguments("--remote-debugging-pipe");
+            if (System.getProperty("headless") != null)
+                options.addArguments("--headless=new");
             options.setAcceptInsecureCerts(true);
 
             return options;
@@ -75,6 +80,12 @@ public enum BrowserFactory {
             options.addArguments("--disable-infobars");
             options.addArguments("--disable-notifications");
             options.addArguments("--remote-allow-origins=*");
+            options.addArguments("--remote-debugging-pipe");
+            options.addArguments("--disable-gpu");
+            options.addArguments("--no-sandbox");
+            options.addArguments("--disable-dev-shm-usage");
+            if (System.getProperty("headless") != null)
+                options.addArguments("--headless=new");
 
             options.setAcceptInsecureCerts(true);
 
@@ -90,6 +101,7 @@ public enum BrowserFactory {
         @Override
         public SafariOptions getOptions() {
             SafariOptions options = new SafariOptions();
+
             options.setAutomaticInspection(false);
 
 
