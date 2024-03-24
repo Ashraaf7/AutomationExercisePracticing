@@ -207,21 +207,23 @@ public class Utility {
     }
 
     /**
-     * Extract the numbers out of an alphanumeric string
-     * @param "string" contains a mix of characters and numbers
-     * @return pure float number
+     * Replace a substring with another substring
+     * @param "fullString" contains a mix of characters and numbers,
+     *        "oldChar" The substring within fullString that needs to be replaced,
+     *        "newChar"  substring that will replace each occurrence of oldChar
+     * @return  new String that results from replacing all occurrences of oldChar in fullString with newChar
      */
-    public static float extractFloat(String alphanumericString) {
-        // Split the input string into an array of strings
-        String[] chunks = alphanumericString.split("\\s+"); // "\\s" indicates any white space character (like spaces, tabs, and line breaks)
-        for (String word : chunks) {
-            try {
-                return Float.parseFloat(word);
-            } catch (NumberFormatException e) {
-                // If parsing fails, continue to the next word
-            }//end catch
-        }//end for loop
-        return 0.0f; // Return 0.0f if no number is found
-    } //end method extractFloat(String alphanumericString)
+    public static String replacingTextOnString(String fullString, String oldChar, String newChar) {
+        return fullString.replace(oldChar, newChar);
+    }
+
+    /**
+     * Convert a string containing float number into a pure float number
+     * @param "text" containing the float number
+     * @return  pure float number
+     */
+    public static float convertStringToFloat(String text) {
+        return Float.parseFloat(text);
+    }
 
 }
