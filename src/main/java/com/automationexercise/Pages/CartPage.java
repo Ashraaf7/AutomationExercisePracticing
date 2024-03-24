@@ -7,17 +7,17 @@ import static com.automationexercise.DriverManager.DriverManager.getDriver;
 
 public class CartPage {
     /*   Locators Section          */
-    private By homeNavbarElement = By.cssSelector("[class='nav navbar-nav'] li:nth-child(1) a");
-    private By productsNavbarElement = By.cssSelector("[class='nav navbar-nav'] li:nth-child(2) a");
-    private By cartNavbarElement = By.cssSelector("[class='nav navbar-nav'] li:nth-child(3) a");
-    private By blueTopWomenItem = By.linkText("Blue Top");
-    private By menShirtItem = By.linkText("Men Tshirt");
-    private By blueTopWomenItemElementPrice = By.cssSelector("#product-1 .cart_price p");
-    private By blueTopWomenItemElementQuantity = By.cssSelector("#product-1 .cart_quantity button");
-    private By menShirtItemElementPrice = By.cssSelector("#product-2 .cart_price p");
-    private By menShirtItemElementQuantity = By.cssSelector("#product-2 .cart_quantity button");
-    private By blueTopWomenItemElementTotal = By.cssSelector("#product-1 .cart_total p");
-    private By menShirtItemElementTotal = By.cssSelector("#product-2 .cart_total p");
+    private final By homeNavbarElement = By.cssSelector("[class='nav navbar-nav'] li:nth-child(1) a");
+    private final By productsNavbarElement = By.cssSelector("[class='nav navbar-nav'] li:nth-child(2) a");
+    private final By cartNavbarElement = By.cssSelector("[class='nav navbar-nav'] li:nth-child(3) a");
+    private final By blueTopWomenItem = By.linkText("Blue Top");
+    private final By menShirtItem = By.linkText("Men Tshirt");
+    private final By blueTopWomenItemElementPrice = By.cssSelector("#product-1 .cart_price p");
+    private final By blueTopWomenItemElementQuantity = By.cssSelector("#product-1 .cart_quantity button");
+    private final By menShirtItemElementPrice = By.cssSelector("#product-2 .cart_price p");
+    private final By menShirtItemElementQuantity = By.cssSelector("#product-2 .cart_quantity button");
+    private final By blueTopWomenItemElementTotal = By.cssSelector("#product-1 .cart_total p");
+    private final By menShirtItemElementTotal = By.cssSelector("#product-2 .cart_total p");
 
     /*   Behaviour Section             */
     public void homeNavbarClick() {
