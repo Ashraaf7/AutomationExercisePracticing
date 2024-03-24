@@ -1,0 +1,2 @@
+[INFO] 22-03-2024 05:09:14 [main] [com.automationexercise.Utilities.Utility.openWebsite(Utility.java:200)] - Open website with URL: https://automationexercise.com/login
+[INFO] 22-03-2024 05:09:14 [main] [com.automationexercise.Pages.P01_LoginPage.enteringLoginInfo(P01_LoginPage.java:27)] - Email: testEmail_2024-03-22_5-9-03AM@gmail.com

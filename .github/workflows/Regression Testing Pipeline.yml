@@ -2,10 +2,10 @@ name: Regression Testing Pipeline
 
 on:
   push:
-    branches: 
+    branches:
       - master
   pull_request:
-    branches: 
+    branches:
       - master
   schedule:
     - cron: '00 4 * * *'
@@ -35,8 +35,8 @@ jobs:
           maven-version: 3.9.6
       - name: Run Tests
         continue-on-error: true
-        run: mvn -Dtest="${env}" clean test
-        
+        run: mvn -Dtest="${env}" -Dheadless clean test
+
   LinuxOnChrome:
     runs-on: ubuntu-latest
     permissions:
@@ -58,4 +58,4 @@ jobs:
           maven-version: 3.9.6
       - name: Run Tests
         continue-on-error: true
-        run: mvn -Dtest="${env}" clean test
+        run: mvn -Dtest="${env}" -Dheadless clean test
