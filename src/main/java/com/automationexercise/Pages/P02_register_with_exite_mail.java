@@ -23,8 +23,8 @@ public class P02_register_with_exite_mail {
    private final By error_msg =By.cssSelector("#form > div > div > div:nth-child(3) > div > form > p");
 
 
-
 //Action
+
 public P02_register_with_exite_mail click_On_signup_Login_Button() {
     clicking(driver, signup_Login_button);
     return this;
@@ -43,12 +43,14 @@ public void click()
         clicking(driver, signup_button);
         return this;
     }
+
     //Validations
 public boolean assert_on_error_message(String expectedText)
 {
    return verifyEquals(error_msg,  expectedText);
 
 }
+
     public boolean assert_on_new_user_signup_message(String expectedText)
     {
         return verifyEquals(new_user_signup_message,  expectedText);

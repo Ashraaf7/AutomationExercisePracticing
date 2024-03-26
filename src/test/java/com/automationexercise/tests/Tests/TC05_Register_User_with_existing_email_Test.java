@@ -6,7 +6,6 @@ import com.automationexercise.Utilities.DataUtils;
 import com.automationexercise.Utilities.Utility;
 import org.testng.Assert;
 import org.testng.annotations.*;
-
 import static com.automationexercise.DriverManager.DriverManager.getDriver;
 import static com.automationexercise.Utilities.DataUtils.getJsonData;
 import static com.automationexercise.Utilities.Utility.*;
