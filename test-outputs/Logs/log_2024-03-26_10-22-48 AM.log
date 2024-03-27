@@ -1,0 +1,3 @@
+[INFO] 26-03-2024 10:22:48 [main] [com.automationexercise.Utilities.Utility.openWebsite(Utility.java:202)] - Open website with URL: https://automationexercise.com/
+[INFO] 26-03-2024 10:22:48 [main] [com.automationexercise.Utilities.Utility.verifyElementVisible(Utility.java:83)] - Verify element visible By.cssSelector: div[class='item active'] div[class='col-sm-6'] h2
+[INFO] 26-03-2024 10:22:49 [main] [com.automationexercise.Pages.P02_HomePage.VerifyScrollUp(P01_HomePage.java:70)] - HeaderText:Full-Fledged practice website for Automation Engineers

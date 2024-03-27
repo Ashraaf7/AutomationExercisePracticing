@@ -137,6 +137,7 @@ public class Utility {
         try {
             generalWait(driver, Integer.parseInt(getConfigValue("config", "WAIT_EXPLICIT")))
                     .until(ExpectedConditions.urlToBe(expectedURL));
+            LogUtils.info("Expected URL: " + expectedURL);
         } catch (Exception e) {
             return false;
         }

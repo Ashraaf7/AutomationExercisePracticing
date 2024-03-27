@@ -21,12 +21,14 @@
         <commonIO>2.15.0</commonIO>
         <apachePoi>5.2.2</apachePoi>
         <monteScreenRecorder>0.7.7.0</monteScreenRecorder>
+         <shutter.bug.version>1.6</shutter.bug.version>
 
     </properties>
 
     <build>
         <directory>test-outputs/target</directory>
     </build>
+
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
         <dependency>
@@ -34,6 +36,7 @@
             <artifactId>selenium-java</artifactId>
             <version>${seleniumVersion}</version>
         </dependency>
+
 
         <!-- https://mvnrepository.com/artifact/org.testng/testng -->
         <dependency>
@@ -87,17 +90,13 @@
         <dependency>
             <groupId>com.assertthat</groupId>
             <artifactId>selenium-shutterbug</artifactId>
-            <version>1.6</version>
+            <version>${shutter.bug.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.seleniumhq.selenium</groupId>
                     <artifactId>selenium-java</artifactId>
                 </exclusion>
             </exclusions>
-
-        </dependency>
-
-
-
+         </dependency>
     </dependencies>
 </project>
