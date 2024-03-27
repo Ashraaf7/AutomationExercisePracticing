@@ -60,9 +60,10 @@ public class CartPage {
         return textMixedQuantity;
     }
 
-    public String getTextBlueTopWomenItemElementTotal(){
-        String textMixedQuantity = Utility.getText(getDriver(),blueTopWomenItemElementTotal);
-        return textMixedQuantity;
+    public float getTextBlueTopWomenItemElementTotal(){
+        String fullText = Utility.getText(getDriver(),blueTopWomenItemElementTotal);
+        fullText = Utility.replacingTextOnString(fullText,"RS .","");
+        return Utility.convertStringToFloat(fullText);
     }
 
     public String getTextMenShirtItemElementTotal(){
@@ -70,7 +71,7 @@ public class CartPage {
         return textMixedQuantity;
     }
 
-    public int getBlueTopWomenElementIntegerPrice(){
+    /*public int getBlueTopWomenElementIntegerPrice(){
         String textMixedQuantity = getTextBlueTopWomenElementPrice();
         return (int)Utility.extractFloat(textMixedQuantity);
     }
@@ -98,5 +99,5 @@ public class CartPage {
     {
         String fullText = getTextMenShirtItemElementTotal();
         return (int)Utility.extractFloat(fullText);
-    }
+    }*/
 }//end class Cart

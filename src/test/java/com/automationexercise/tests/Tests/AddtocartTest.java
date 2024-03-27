@@ -3,7 +3,6 @@ package com.automationexercise.tests.Tests;
 import com.automationexercise.DriverManager.DriverFactory;
 import com.automationexercise.DriverManager.DriverManager;
 import com.automationexercise.Pages.CartPage;
-import com.automationexercise.Pages.HomePage;
 import com.automationexercise.Pages.ProductsPage;
 import com.automationexercise.Utilities.DataUtils;
 import com.automationexercise.Utilities.Utility;
