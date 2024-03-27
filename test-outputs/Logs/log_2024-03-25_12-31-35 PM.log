@@ -1,0 +1,5 @@
+[INFO] 25-03-2024 12:31:35 [main] [com.automationexercise.Utilities.Utility.openWebsite(Utility.java:202)] - Open website with URL: https://automationexercise.com/
+[INFO] 25-03-2024 12:31:37 [main] [com.automationexercise.Pages.P02_HomePage.pressProductsButton(P01_HomePage.java:45)] - Clicked on product button
+[ERROR] 25-03-2024 12:31:47 [main] [com.automationexercise.Pages.P02_HomePage.ADS(P01_HomePage.java:35)] - Cannot click on ads
+[INFO] 25-03-2024 12:31:48 [main] [com.automationexercise.Utilities.Utility.verifyElementVisible(Utility.java:83)] - Verify element visible By.cssSelector: div[class="features_items"]>h2
+[INFO] 25-03-2024 12:31:51 [main] [com.automationexercise.Utilities.Utility.verifyElementVisible(Utility.java:83)] - Verify element visible By.xpath: //h2[@class="title text-center" and contains(text(), 'Searched Products')]
