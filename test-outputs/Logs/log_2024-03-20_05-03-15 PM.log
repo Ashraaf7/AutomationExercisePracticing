@@ -1,0 +1,2 @@
+[INFO] 20-03-2024 17:03:16 [main] [com.automationexercise.Utilities.Utility.openWebsite(Utility.java:202)] - Open website with URL: https://automationexercise.com/
+[TRACE] 20-03-2024 17:03:26 [main] [com.automationexercise.Pages.HomePage.pressProductsButton(HomePage.java:54)] - Clicked on product button

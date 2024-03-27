@@ -1,0 +1,2 @@
+[INFO] 25-03-2024 12:17:11 [main] [com.automationexercise.Utilities.Utility.openWebsite(Utility.java:202)] - Open website with URL: https://automationexercise.com/
+[INFO] 25-03-2024 12:17:13 [main] [com.automationexercise.Pages.P02_HomePage.pressProductsButton(P01_HomePage.java:44)] - Clicked on product button

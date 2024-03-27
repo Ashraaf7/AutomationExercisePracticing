@@ -1,0 +1,5 @@
+[INFO] 27-03-2024 04:24:28 [main] [com.automationexercise.Utilities.Utility.openWebsite(Utility.java:207)] - Open website with URL: https://automationexercise.com/
+[INFO] 27-03-2024 04:24:28 [main] [com.automationexercise.Pages.P02_HomePage.pressProductsButton(P02_HomePage.java:42)] - Clicked on product button
+[INFO] 27-03-2024 04:24:35 [main] [com.automationexercise.Utilities.Utility.verifyElementVisible(Utility.java:88)] - Verify element visible By.cssSelector: [id="dismiss-button"]
+[INFO] 27-03-2024 04:24:36 [main] [com.automationexercise.Pages.P02_HomePage.ADS(P02_HomePage.java:31)] - Ad button clicked
+[INFO] 27-03-2024 04:24:52 [main] [com.automationexercise.Utilities.Utility.verifyElementVisible(Utility.java:88)] - Verify element visible By.cssSelector: div[class="features_items"]>h2
