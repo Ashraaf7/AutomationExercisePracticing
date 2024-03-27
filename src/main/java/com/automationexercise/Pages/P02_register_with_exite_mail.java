@@ -15,12 +15,12 @@ public class P02_register_with_exite_mail {
         this.driver=driver;
     }
 
-    private  final By signup_Login_button =By.cssSelector("#header > div > div > div > div.col-sm-8 > div > ul > li:nth-child(4) > a");
-    private final By name_field =By.cssSelector("#form > div > div > div:nth-child(3) > div > form > input[type=text]:nth-child(2)");
-   private final By email_address_field =By.cssSelector("#form > div > div > div:nth-child(3) > div > form > input[type=email]:nth-child(3)");
-   private final  By signup_button =By.cssSelector("#form > div > div > div:nth-child(3) > div > form > button");
-   private final By new_user_signup_message=By.cssSelector("#form > div > div > div:nth-child(3) > div > h2");
-   private final By error_msg =By.cssSelector("#form > div > div > div:nth-child(3) > div > form > p");
+    private  final By signup_Login_button =By.cssSelector("i[class=\"fa fa-lock\"]");
+    private final By name_field =By.cssSelector("input[data-qa=\"signup-name\"]");
+   private final By email_address_field =By.cssSelector("input[data-qa=\"signup-email\"]");
+   private final  By signup_button =By.cssSelector("button[data-qa=\"signup-button\"]");
+   private final By new_user_signup_message=By.cssSelector("div:nth-child(3) > div > h2");
+   private final By error_msg =By.cssSelector("p[style=\"color: red;\"]");
 
 
 //Action
