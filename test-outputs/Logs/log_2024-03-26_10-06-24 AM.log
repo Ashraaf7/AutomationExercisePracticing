@@ -1,0 +1,2 @@
+[INFO] 26-03-2024 10:06:24 [main] [com.automationexercise.Utilities.Utility.openWebsite(Utility.java:202)] - Open website with URL: https://automationexercise.com/
+[INFO] 26-03-2024 10:06:24 [main] [com.automationexercise.Utilities.Utility.verifyElementVisible(Utility.java:83)] - Verify element visible By.xpath: //h2[contains(text(),'Subscription')]

@@ -1,0 +1,21 @@
+[INFO] 25-03-2024 15:22:43 [main] [com.automationexercise.Utilities.Utility.openWebsite(Utility.java:202)] - Open website with URL: https://automationexercise.com/
+[INFO] 25-03-2024 15:22:43 [main] [com.automationexercise.Utilities.Utility.VerifyURL(Utility.java:135)] - Expected URL: https://automationexercise.com/
+[INFO] 25-03-2024 15:22:49 [main] [com.automationexercise.Utilities.Utility.openWebsite(Utility.java:202)] - Open website with URL: https://automationexercise.com/
+[ERROR] 25-03-2024 15:22:49 [main] [com.automationexercise.Utilities.Utility.verifyElementVisible(Utility.java:86)] - javascript error: {"status":32,"value":"An invalid or illegal selector was specified"}
+  (Session info: MicrosoftEdge=123.0.2420.53)
+Build info: version: '4.18.1', revision: 'b1d3319b48'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.2'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [a1ff88cf1b8d65731226fdf63fe95c68, findElement {value=//h2[contains(text(),'Subscription')], using=css selector}]
+Capabilities {acceptInsecureCerts: true, browserName: MicrosoftEdge, browserVersion: 123.0.2420.53, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:64371}, msedge: {msedgedriverVersion: 123.0.2420.53 (357a32c89da2..., userDataDir: C:\Users\PC\AppData\Local\T...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64371/devtoo..., se:cdpVersion: 123.0.2420.53, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a1ff88cf1b8d65731226fdf63fe95c68
+[INFO] 25-03-2024 15:22:55 [main] [com.automationexercise.Utilities.Utility.openWebsite(Utility.java:202)] - Open website with URL: https://automationexercise.com/
+[ERROR] 25-03-2024 15:22:55 [main] [com.automationexercise.Utilities.Utility.verifyElementVisible(Utility.java:86)] - javascript error: {"status":32,"value":"An invalid or illegal selector was specified"}
+  (Session info: MicrosoftEdge=123.0.2420.53)
+Build info: version: '4.18.1', revision: 'b1d3319b48'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.2'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [e1f02c1fe5a133a8362af0f9d76b5c81, findElement {value=//h2[contains(text(),'Full-Fledged')]
+, using=css selector}]
+Capabilities {acceptInsecureCerts: true, browserName: MicrosoftEdge, browserVersion: 123.0.2420.53, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:64402}, msedge: {msedgedriverVersion: 123.0.2420.53 (357a32c89da2..., userDataDir: C:\Users\PC\AppData\Local\T...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64402/devtoo..., se:cdpVersion: 123.0.2420.53, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e1f02c1fe5a133a8362af0f9d76b5c81
