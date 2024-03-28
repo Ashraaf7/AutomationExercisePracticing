@@ -1,0 +1,4 @@
+[INFO] 26-03-2024 15:41:25 [main] [com.automationexercise.Utilities.Utility.openWebsite(Utility.java:201)] - Open website with URL: https://automationexercise.com/
+[INFO] 26-03-2024 15:41:32 [main] [com.automationexercise.Pages.P01_LoginPage.enteringLoginInfo(P01_LoginPage.java:30)] - Email: yoyo122024-03-26_3-41-16PM@gmail.com
+[INFO] 26-03-2024 15:41:39 [main] [com.automationexercise.Utilities.Utility.verifyElementVisible(Utility.java:83)] - Verify element visible By.cssSelector: a[href="/logout"]
+[INFO] 26-03-2024 15:41:39 [main] [com.automationexercise.Utilities.Utility.verifyElementVisible(Utility.java:83)] - Verify element visible By.cssSelector:  #header > div > div > div > div.col-sm-8 > div > ul > li:nth-child(10) > a > b

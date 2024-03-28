@@ -5,8 +5,8 @@ import io.restassured.RestAssured;
 import static io.restassured.RestAssured.given;
 
 
-public class ApiService_Page {
-private static final  String baseURI = "http://automationexercise.com";
+public class ApiService {
+//private static final  String baseURI = "http://automationexercise.com";
   /*  public static void registerTestCase(String name, String email,String password,String firstname,String lastname,
                                         String company,String address1,String country,String zipcode,String state,String city,String mobile_number ) {
         HttpClient client = HttpClient.newHttpClient();
@@ -27,7 +27,7 @@ private static final  String baseURI = "http://automationexercise.com";
     }*/
     public void registrationApi(String name, String email,String password,String firstname,String lastname,
                                 String company,String address1,String country,String zipcode,String state,String city,String mobile_number) {
-
+         RestAssured.baseURI = "http://automationexercise.com";
         RestAssured.given()
                 .contentType("application/x-www-form-urlencoded")
                 .formParam("name", name)
@@ -49,12 +49,13 @@ private static final  String baseURI = "http://automationexercise.com";
 
 public void loginApi(String email, String password)
 {
-RestAssured.given()
+    RestAssured.baseURI = "http://automationexercise.com";
+    RestAssured.given()
         .contentType("application/x-www-form-urlencoded")
         .formParam("email", email)
         .formParam("password", password)
         .when()
-        .post("/api/createAccount")
+        .post("/api/verifyLogin")
         .then().log().body();
 
 }

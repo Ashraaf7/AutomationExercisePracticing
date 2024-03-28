@@ -1,6 +1,7 @@
 package com.automationexercise.Utilities;
 
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -199,5 +200,44 @@ public class Utility {
         getDriver().get(URL);
         implicitlyWait();
         LogUtils.info("Open website with URL: " + URL);
+    }
+        /** Get element location
+         * @param Locator the specified element
+          */
+
+    public static boolean getElementLocation(By Locator)
+    {
+        boolean isAtTop = (boolean) ((JavascriptExecutor) getDriver()).executeScript(
+                "return arguments[0].getBoundingClientRect().top <= 0", Locator);
+
+        // Output the result
+        if (isAtTop) {
+            System.out.println("Element is at the top of the page.");
+            return true;
+        } else {
+            System.out.println("Element is not at the top of the page.");
+            return false;
+        }
+    }
+
+    public static void hoverElement(WebElement Locator)
+    {
+     //   WebElement element = getDriver().findElement(Locator);
+
+        // Create an instance of Actions class
+        Actions actions = new Actions(getDriver());
+
+        // Perform hover over the element
+        actions.moveToElement(Locator).perform();
+        actions.click().perform();
+    }
+    /**
+     * Scroll to specific element using it's locator
+     * @param locator
+     */
+    public static void ScrollToElement (WebElement locator) {
+       // WebElement element = getDriver().findElement(locator);
+        ((JavascriptExecutor) getDriver()).executeScript("arguments[0].scrollIntoView();", locator);
+
     }
 }

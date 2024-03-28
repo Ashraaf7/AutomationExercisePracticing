@@ -1,0 +1,16 @@
+{
+   "name": "yoyo",
+   "email": "yoyo12",
+   "password": "Test@123",
+   "firstname" :"yoyo",
+   "lastname": "hassan",
+  "company": "Qorrect",
+  "address1": "address",
+  "country":"India",
+  "zipcode": "123",
+  "state":"state",
+  "city": "city",
+  "mobile_number": "2333",
+  "order_comment": "my comment"
+
+}
