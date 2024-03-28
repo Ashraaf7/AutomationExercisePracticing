@@ -45,7 +45,11 @@ public class P01_LoginPage {
     public void navigateToLoginUrl() {
         openWebsite(getEnvironmentPropertyValue("LOGIN_URL"));
     }
-
+    
+   //Validations
+    public boolean checkErrorMessageText(String expectedText) {
+        return verifyEquals(errorMessage, expectedText);
+    }
 
 
 }
