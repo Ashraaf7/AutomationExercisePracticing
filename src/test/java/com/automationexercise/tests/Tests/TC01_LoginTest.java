@@ -24,6 +24,13 @@ public class TC01_LoginTest {
         new P01_LoginPage(getDriver()).navigateToLoginUrl();
     }
 
+  @Test
+    public void loginWithInvalidCredentials() {
+        new P01_LoginPage(getDriver())
+                .enteringLoginInfo(EMAIL, PASSWORD)
+                .clickOnLoginButton();
+        Assert.assertTrue(new P01_LoginPage(getDriver()).checkErrorMessageText(ERROR_MSG));
+    }
 
 
 
