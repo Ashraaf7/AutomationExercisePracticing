@@ -88,6 +88,12 @@
             <version>${monteScreenRecorder}</version>
         </dependency>
         <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>4.3.3</version>
+            <scope>compile</scope>
+        </dependency>
+             <dependency>
             <groupId>com.assertthat</groupId>
             <artifactId>selenium-shutterbug</artifactId>
             <version>${shutter.bug.version}</version>
@@ -97,14 +103,11 @@
                     <artifactId>selenium-java</artifactId>
                 </exclusion>
             </exclusions>
-
         </dependency>
         <dependency>
             <groupId>com.jayway.jsonpath</groupId>
             <artifactId>json-path</artifactId>
             <version>${json.path.version}</version>
         </dependency>
-
-
     </dependencies>
 </project>

@@ -1,0 +1,3 @@
+[INFO] 28-03-2024 00:46:03 [main] [com.automationexercise.Utilities.Utility.openWebsite(Utility.java:202)] - Open website with URL: https://automationexercise.com/
+[INFO] 28-03-2024 00:46:05 [main] [com.automationexercise.Pages.P01_LoginPage.enteringLoginInfo(P01_LoginPage.java:30)] - Email: nora2024-03-28_12-36-54AM@gmail.com2024-03-28_12-45-54AM@gmail.com
+[ERROR] 28-03-2024 00:46:11 [main] [com.automationexercise.Utilities.Utility.verifyElementVisible(Utility.java:87)] - Expected condition failed: waiting for visibility of element located by By.cssSelector: a[href="/logout"] (tried for 5 second(s) with 500 milliseconds interval)

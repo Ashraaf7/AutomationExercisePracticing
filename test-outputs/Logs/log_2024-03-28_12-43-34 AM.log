@@ -1,0 +1,2 @@
+[INFO] 28-03-2024 00:43:34 [main] [com.automationexercise.Utilities.Utility.openWebsite(Utility.java:202)] - Open website with URL: https://automationexercise.com/
+[INFO] 28-03-2024 00:43:37 [main] [com.automationexercise.Pages.P01_LoginPage.enteringLoginInfo(P01_LoginPage.java:30)] - Email: nora2024-03-28_12-36-54AM@gmail.com2024-03-28_12-43-26AM@gmail.com
