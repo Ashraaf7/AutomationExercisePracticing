@@ -1,6 +1,7 @@
 package com.automationexercise.DriverManager;
 
 import org.openqa.selenium.MutableCapabilities;
+import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -36,7 +37,10 @@ public enum BrowserFactory {
             options.addArguments("--disable-infobars");
             options.addArguments("--disable-notifications");
             options.addArguments("--remote-allow-origins=*");
-
+            options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
+            options.addArguments("--remote-debugging-pipe");
+            if (System.getProperty("headless") != null)
+                options.addArguments("--headless=new");
             options.setAcceptInsecureCerts(true);
 
             return options;
@@ -51,6 +55,10 @@ public enum BrowserFactory {
         public FirefoxOptions getOptions() {
             FirefoxOptions options = new FirefoxOptions();
             options.addArguments("--start-maximized");
+            options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
+            options.addArguments("--remote-debugging-pipe");
+            if (System.getProperty("headless") != null)
+                options.addArguments("--headless=new");
             options.setAcceptInsecureCerts(true);
 
             return options;
@@ -72,9 +80,16 @@ public enum BrowserFactory {
             options.setExperimentalOption("prefs", prefs);
             options.addArguments("--start-maximized");
             options.addArguments("--disable-extensions");
+            options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
             options.addArguments("--disable-infobars");
             options.addArguments("--disable-notifications");
             options.addArguments("--remote-allow-origins=*");
+            options.addArguments("--remote-debugging-pipe");
+            options.addArguments("--disable-gpu");
+            options.addArguments("--no-sandbox");
+            options.addArguments("--disable-dev-shm-usage");
+            if (System.getProperty("headless") != null)
+                options.addArguments("--headless=new");
 
             options.setAcceptInsecureCerts(true);
 
@@ -90,6 +105,7 @@ public enum BrowserFactory {
         @Override
         public SafariOptions getOptions() {
             SafariOptions options = new SafariOptions();
+            options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
             options.setAutomaticInspection(false);
 
 

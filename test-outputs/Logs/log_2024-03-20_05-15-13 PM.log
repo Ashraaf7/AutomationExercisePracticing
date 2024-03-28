@@ -1,0 +1,3 @@
+[INFO] 20-03-2024 17:15:13 [main] [com.automationexercise.Utilities.Utility.openWebsite(Utility.java:202)] - Open website with URL: https://automationexercise.com/
+[TRACE] 20-03-2024 17:15:13 [main] [com.automationexercise.Pages.HomePage.pressProductsButton(HomePage.java:53)] - Clicked on product button
+[INFO] 20-03-2024 17:15:14 [main] [com.automationexercise.Pages.HomePage.ADS(HomePage.java:29)] - Driver Switched to IframeEdgeDriver: MicrosoftEdge on windows (f0b7f1ebb0aad9a36d596a4341a61729)

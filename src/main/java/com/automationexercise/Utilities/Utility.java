@@ -39,6 +39,10 @@ public class Utility {
 
     }
 
+    public static boolean verifyEquals(By locator, String expectedText) {
+        return getText(getDriver(), locator).equals(expectedText);
+    }
+
 
     public static String getTimestamp() {
         return new SimpleDateFormat("yyyy-MM-dd_h-m-ssa").format(new Date());
@@ -133,6 +137,7 @@ public class Utility {
         try {
             generalWait(driver, Integer.parseInt(getConfigValue("config", "WAIT_EXPLICIT")))
                     .until(ExpectedConditions.urlToBe(expectedURL));
+            LogUtils.info("Expected URL: " + expectedURL);
         } catch (Exception e) {
             return false;
         }
@@ -198,7 +203,6 @@ public class Utility {
      */
     public static void openWebsite(String URL) {
         getDriver().get(URL);
-        implicitlyWait();
         LogUtils.info("Open website with URL: " + URL);
     }
         /** Get element location

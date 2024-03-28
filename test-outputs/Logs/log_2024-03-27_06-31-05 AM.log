@@ -1,0 +1,15 @@
+[INFO] 27-03-2024 06:31:05 [main] [com.automationexercise.Utilities.Utility.openWebsite(Utility.java:205)] - Open website with URL: https://automationexercise.com/
+[INFO] 27-03-2024 06:31:05 [main] [com.automationexercise.Pages.P02_HomePage.pressProductsButton(P02_HomePage.java:31)] - Clicked on product button
+[ERROR] 27-03-2024 06:31:11 [main] [com.automationexercise.Utilities.Utility.verifyElementVisible(Utility.java:90)] - Expected condition failed: waiting for visibility of element located by By.cssSelector: [id="dismiss-button"] (tried for 5 second(s) with 500 milliseconds interval)
+Build info: version: '4.18.1', revision: 'b1d3319b48'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: true, browserName: MicrosoftEdge, browserVersion: 122.0.2365.92, fedcm:accounts: true, msedge: {msedgedriverVersion: 122.0.2365.106 (a5761ec7165..., userDataDir: C:\Users\ahmed\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0eb7f8b3f9d6f90d54bb9030bf86df89
+[INFO] 27-03-2024 06:31:11 [main] [com.automationexercise.Pages.P_AdPage.closeAd(P_AdPage.java:18)] - Ad button clicked
+[ERROR] 27-03-2024 06:31:16 [main] [com.automationexercise.Utilities.Utility.verifyElementVisible(Utility.java:90)] - Expected condition failed: waiting for visibility of element located by By.cssSelector: div[class="features_items"]>h2 (tried for 5 second(s) with 500 milliseconds interval)
+Build info: version: '4.18.1', revision: 'b1d3319b48'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: true, browserName: MicrosoftEdge, browserVersion: 122.0.2365.92, fedcm:accounts: true, msedge: {msedgedriverVersion: 122.0.2365.106 (a5761ec7165..., userDataDir: C:\Users\ahmed\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0eb7f8b3f9d6f90d54bb9030bf86df89

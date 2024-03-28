@@ -1,0 +1,21 @@
+{
+  "userData": {
+    "emailTimestamp": "testEmail_",
+    "fullNameRegister": "Amine BC",
+    "password": "Ashraf",
+    "errorMessage": "Your email or password is incorrect!",
+    "daysSelect": "12",
+    "monthsSelect": "January",
+    "yearsSelect": "1980",
+    "firstNameInput": "amine",
+    "lastNameInput": "bcf",
+    "companyNameInputField": "code cooperation",
+    "addressOneInput": "address one input",
+    "addressTwwInput": "address Two Input",
+    "countrySelect": "Canada",
+    "stateInput": "state",
+    "cityInput": "city",
+    "zipcodeInput": "8000",
+    "mobileNumberInput": "+21620789093"
+  }
+}
