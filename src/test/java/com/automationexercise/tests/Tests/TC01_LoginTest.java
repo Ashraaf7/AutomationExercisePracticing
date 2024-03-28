@@ -14,8 +14,8 @@ import static com.automationexercise.Utilities.DataUtils.getJsonData;
 import static com.automationexercise.Utilities.Utility.getTimestamp;
 
 public class TC01_LoginTest {
-    private final String email = getJsonData("loginData", "email") + getTimestamp() + "@gmail.com"; //ahmedashraf09@gmail
-    private final String password = getJsonData("loginData", "password");
+    private final String EMAIL = getJsonData("loginData", "email") + getTimestamp() + "@gmail.com"; //ahmedashraf09@gmail
+    private final String PASSWORD = getJsonData("loginData", "password");
     private final String ERROR_MSG = getJsonData("loginData", "errorMessage");
 
     @BeforeMethod
