@@ -14,6 +14,7 @@ public class DriverManager {
     }
 
     public static void setDriver(WebDriver driver) {
+
         DriverManager.driverThreadLocal.set(driver);
     }
 

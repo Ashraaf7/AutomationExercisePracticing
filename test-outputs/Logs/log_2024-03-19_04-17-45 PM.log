@@ -1,0 +1,4 @@
+[INFO] 19-03-2024 16:17:45 [main] [com.automationexercise.Utilities.Utility.openWebsite(Utility.java:201)] - Open website with URL: https://automationexercise.com/
+[INFO] 19-03-2024 16:17:46 [main] [com.automationexercise.Utilities.Utility.verifyElementVisible(Utility.java:83)] - Verify element visible By.cssSelector: #slider-carousel > div
+[INFO] 19-03-2024 16:17:55 [main] [com.automationexercise.Utilities.Utility.reloadPage(Utility.java:190)] - Reloaded page https://automationexercise.com/products
+[INFO] 19-03-2024 16:18:00 [main] [com.automationexercise.Utilities.Utility.reloadPage(Utility.java:190)] - Reloaded page https://automationexercise.com/products
