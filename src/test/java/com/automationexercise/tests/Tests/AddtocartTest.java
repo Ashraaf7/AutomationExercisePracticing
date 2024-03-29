@@ -3,8 +3,7 @@ package com.automationexercise.tests.Tests;
 import com.automationexercise.DriverManager.DriverFactory;
 import com.automationexercise.DriverManager.DriverManager;
 import com.automationexercise.Pages.CartPage;
-import com.automationexercise.Pages.P02_HomePage;
-import com.automationexercise.Pages.ProductsPage;
+import com.automationexercise.Pages.P03_SearchProductPage;
 import com.automationexercise.Utilities.DataUtils;
 import com.automationexercise.Utilities.Utility;
 import org.testng.asserts.SoftAssert;
@@ -26,13 +25,15 @@ public class AddtocartTest {
     @Test
     public void TC01_addToCart(){
         new SoftAssert().assertTrue(VerifyURL(getDriver(), DataUtils.getEnvironmentPropertyValue("BASE_URL")));
-        new P02_HomePage(getDriver()).ADS();
-        new CartPage().productsNavbarClick();
-        new ProductsPage()
+        ///new P02_HomePage(getDriver()).ADS();
+
+        new CartPage().clickONproductsNavbar();
+        Utility.reloadPage();
+        new P03_SearchProductPage(getDriver())
                 .hoverOnBlueTopItemElement()
                 .ClickOnBlueTopAddToCart()
                 .clickOnContinuoShoppingButton();
-        new ProductsPage()
+        new P03_SearchProductPage(getDriver())
                 .hoverOnmenTshirtItemItemElement()
                 .ClickOnMenTshitrtAddTOCart()
                 .clickOnContinuoShoppingButton()

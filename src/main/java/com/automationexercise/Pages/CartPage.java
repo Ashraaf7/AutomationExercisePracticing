@@ -24,7 +24,7 @@ public class CartPage {
         Utility.clicking(getDriver(), homeNavbarElement);
     }
 
-    public void productsNavbarClick() {
+    public void clickONproductsNavbar() {
         Utility.clicking(getDriver(), productsNavbarElement);
     }
 

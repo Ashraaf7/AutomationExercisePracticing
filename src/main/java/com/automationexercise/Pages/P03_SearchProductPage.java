@@ -1,6 +1,8 @@
 package com.automationexercise.Pages;
 
 import com.automationexercise.Utilities.LogUtils;
+import com.automationexercise.Utilities.Utility;
+import com.automationexercise.Utilities.WaitsUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -19,6 +21,12 @@ public class P03_SearchProductPage {
             By.xpath("//h2[@class=\"title text-center\" and contains(text(), 'Searched Products')]");
     private final List<WebElement> SearchResults = getDriver().findElements
             (By.xpath("//div[@id=\"cartModal\"]//following::div[@class=\"col-sm-4\"]"));
+    private final By cartNavbarElement = By.cssSelector("[class='nav navbar-nav'] li:nth-child(3) a");
+    private final By blueTopItem = By.xpath("//*[@class='features_items']/div[2]");
+    private final By menTshirtItem = By.xpath("//*[@class='features_items']/div[3]");
+    private final By bluetopaddtoCart = By.cssSelector("[data-product-id='1']");
+    private final By menTshirtAddtocart = By.cssSelector("[data-product-id='2']");
+    private final By continueShoppingButton = By.cssSelector("[data-dismiss='modal']");
     public P03_SearchProductPage(WebDriver driver) {
         this.driver = driver;
     }
@@ -46,7 +54,33 @@ public class P03_SearchProductPage {
     public int VerifyAllProductRelatedToSearchVisible() {
         LogUtils.info("Search Result Size:" + SearchResults.size());
         return SearchResults.size();
+
+
     }
 
+    public CartPage clickOnCartNavbar(){
+        Utility.clicking(getDriver(),cartNavbarElement);
+        return new CartPage();
+    }
+    public P03_SearchProductPage hoverOnBlueTopItemElement(){
+        Utility.hoverOnElement(getDriver(),blueTopItem);
+        return this;
+    }
+    public P03_SearchProductPage hoverOnmenTshirtItemItemElement(){
+        Utility.hoverOnElement(getDriver(),menTshirtItem);
+        return this;
+    }
+    public P03_SearchProductPage ClickOnBlueTopAddToCart(){
+        Utility.clicking(driver,bluetopaddtoCart);
+        return this;
+    }
+    public P03_SearchProductPage ClickOnMenTshitrtAddTOCart(){
+        Utility.clicking(driver,menTshirtAddtocart);
+        return this;
+    }
+    public P03_SearchProductPage clickOnContinuoShoppingButton(){
+        Utility.clicking(driver,continueShoppingButton);
+        return this;
+    }
 
 }

@@ -1,0 +1,4 @@
+[INFO] 29-03-2024 17:08:06 [main] [com.automationexercise.Utilities.Utility.openWebsite(Utility.java:207)] - Open website with URL: https://automationexercise.com/
+[INFO] 29-03-2024 17:08:06 [main] [com.automationexercise.Utilities.Utility.VerifyURL(Utility.java:141)] - Expected URL: https://automationexercise.com/
+[INFO] 29-03-2024 17:08:18 [main] [com.automationexercise.Utilities.Utility.reloadPage(Utility.java:197)] - Reloaded page https://automationexercise.com/products
+[INFO] 29-03-2024 17:08:27 [main] [com.automationexercise.Utilities.Utility.reloadPage(Utility.java:197)] - Reloaded page https://automationexercise.com/products
