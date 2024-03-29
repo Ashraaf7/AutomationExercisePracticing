@@ -1,11 +1,8 @@
 package com.automationexercise.Pages;
 
-import com.automationexercise.DriverManager.DriverManager;
 import com.automationexercise.Utilities.Utility;
 import com.automationexercise.Utilities.WaitsUtils;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.interactions.Actions;
 
 import static com.automationexercise.DriverManager.DriverManager.getDriver;
 
@@ -19,33 +16,31 @@ public class ProductsPage {
     private By continueShoppingButton = By.cssSelector("[data-dismiss='modal']");
 
     /*  Behaviour Sections  */
-    public CartPage cartNavbarElementClick(){
+    public CartPage clickOnCartNavbar(){
         Utility.clicking(getDriver(),cartNavbarElement);
         return new CartPage();
     }
     public ProductsPage hoverOnBlueTopItemElement(){
-        WaitsUtils.explicitlyWaitForVisibility(getDriver(),blueTopItem);
-        new Actions(getDriver()).moveToElement(getDriver().findElement(blueTopItem)).perform();
+        Utility.hoverOnElement(getDriver(),blueTopItem);
         return this;
     }
     public ProductsPage hoverOnmenTshirtItemItemElement(){
-        WaitsUtils.explicitlyWaitForVisibility(getDriver(),menTshirtItem);
-        new Actions(getDriver()).moveToElement(getDriver().findElement(menTshirtItem)).perform();
+        Utility.hoverOnElement(getDriver(),menTshirtItem);
         return this;
     }
-    public ProductsPage bluetopddtoCartclick(){
-        Utility.reloadPage(); // to avoid the ads appearing before clicking on "Add to cart" button which causes "org.openqa.selenium.ElementClickInterceptedException"
+    public ProductsPage ClickOnBlueTopAddToCart(){
+       // Utility.reloadPage(); // to avoid the ads appearing before clicking on "Add to cart" button which causes "org.openqa.selenium.ElementClickInterceptedException"
         WaitsUtils.explicitlyWaitForClickability(getDriver(),bluetopaddtoCart);
         Utility.clicking(getDriver(),bluetopaddtoCart);
         return this;
     }
-    public ProductsPage menTshirtAddtocartClick(){
+    public ProductsPage ClickOnMenTshitrtAddTOCart(){
         Utility.reloadPage(); // to avoid the ads appearing before clicking on "Add to cart" button which causes "org.openqa.selenium.ElementClickInterceptedException"
         WaitsUtils.explicitlyWaitForClickability(getDriver(),menTshirtAddtocart);
         Utility.clicking(getDriver(),menTshirtAddtocart);
         return this;
     }
-    public ProductsPage continueShoppingButtonClick(){
+    public ProductsPage clickOnContinuoShoppingButton(){
         WaitsUtils.explicitlyWaitForVisibility(getDriver(),continueShoppingButton);
         Utility.clicking(getDriver(),continueShoppingButton);
         return this;

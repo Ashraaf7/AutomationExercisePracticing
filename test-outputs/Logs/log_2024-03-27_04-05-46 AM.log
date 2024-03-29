@@ -1,0 +1,3 @@
+[INFO] 27-03-2024 04:05:47 [main] [com.automationexercise.Utilities.Utility.openWebsite(Utility.java:209)] - Open website with URL: https://automationexercise.com/
+[INFO] 27-03-2024 04:05:47 [main] [com.automationexercise.Utilities.Utility.VerifyURL(Utility.java:142)] - Expected URL: https://automationexercise.com/
+[ERROR] 27-03-2024 04:05:58 [main] [com.automationexercise.Pages.P02_HomePage.ADS(P02_HomePage.java:33)] - Cannot click on ads

@@ -1,6 +1,8 @@
 package com.automationexercise.Utilities;
 
+import com.automationexercise.Pages.ProductsPage;
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -225,6 +227,13 @@ public class Utility {
      */
     public static float convertStringToFloat(String text) {
         return Float.parseFloat(text);
+    }
+    /*
+    * @brief Hover on an element
+    * */
+    public static void hoverOnElement(WebDriver driver, By locator){
+        WaitsUtils.explicitlyWaitForVisibility(driver,locator);
+        new Actions(getDriver()).moveToElement(driver.findElement(locator)).perform();
     }
 
 }
