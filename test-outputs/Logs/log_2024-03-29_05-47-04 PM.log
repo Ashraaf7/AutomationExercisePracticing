@@ -1,0 +1,3 @@
+[INFO] 29-03-2024 17:47:05 [main] [com.automationexercise.Utilities.Utility.openWebsite(Utility.java:206)] - Open website with URL: https://automationexercise.com/
+[INFO] 29-03-2024 17:47:05 [main] [com.automationexercise.Utilities.Utility.VerifyURL(Utility.java:140)] - Expected URL: https://automationexercise.com/
+[INFO] 29-03-2024 17:47:14 [main] [com.automationexercise.Utilities.Utility.reloadPage(Utility.java:196)] - Reloaded page https://automationexercise.com/#google_vignette

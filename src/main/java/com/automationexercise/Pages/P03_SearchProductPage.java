@@ -2,7 +2,6 @@ package com.automationexercise.Pages;
 
 import com.automationexercise.Utilities.LogUtils;
 import com.automationexercise.Utilities.Utility;
-import com.automationexercise.Utilities.WaitsUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -58,9 +57,9 @@ public class P03_SearchProductPage {
 
     }
 
-    public CartPage clickOnCartNavbar(){
+    public P12_CartPage clickOnCartNavbar(){
         Utility.clicking(getDriver(),cartNavbarElement);
-        return new CartPage();
+        return new P12_CartPage();
     }
     public P03_SearchProductPage hoverOnBlueTopItemElement(){
         Utility.hoverOnElement(getDriver(),blueTopItem);
@@ -71,7 +70,7 @@ public class P03_SearchProductPage {
         return this;
     }
     public P03_SearchProductPage ClickOnBlueTopAddToCart(){
-        Utility.clicking(driver,bluetopaddtoCart);
+        P_AdPage.closeAdByRefreshing(bluetopaddtoCart);
         return this;
     }
     public P03_SearchProductPage ClickOnMenTshitrtAddTOCart(){
