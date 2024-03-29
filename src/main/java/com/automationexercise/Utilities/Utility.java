@@ -18,8 +18,6 @@ import static com.automationexercise.Utilities.WaitsUtils.*;
 public class Utility {
 
 
-
-
     //TODO: Clicking on element after checking clickability
     public static void clicking(WebDriver driver, By locator) {
         explicitlyWaitForClickability(driver, locator);
@@ -39,6 +37,7 @@ public class Utility {
         return findWebElement(driver, locator).getText();
 
     }
+
     public static boolean verifyEquals(By locator, String expectedText) {
         return getText(getDriver(), locator).equals(expectedText);
     }
@@ -203,7 +202,6 @@ public class Utility {
      */
     public static void openWebsite(String URL) {
         getDriver().get(URL);
-        implicitlyWait();
         LogUtils.info("Open website with URL: " + URL);
     }
 

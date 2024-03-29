@@ -32,7 +32,7 @@ public class TC09_SearchProductTest {
     public void userSearchForProduct() {
         // navigate to the products page
         new P02_HomePage(getDriver()).pressProductsButton();
-        new P02_HomePage(getDriver()).ADS();
+        
 
         // verify that the user is navigated to the all products page
 

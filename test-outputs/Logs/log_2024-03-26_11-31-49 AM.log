@@ -1,0 +1,6 @@
+[INFO] 26-03-2024 11:31:50 [main] [com.automationexercise.Utilities.Utility.openWebsite(Utility.java:206)] - Open website with URL: https://automationexercise.com/
+[INFO] 26-03-2024 11:31:59 [main] [com.automationexercise.Utilities.Utility.openWebsite(Utility.java:206)] - Open website with URL: https://automationexercise.com/signup
+[INFO] 26-03-2024 11:32:41 [main] [com.automationexercise.Utilities.Utility.openWebsite(Utility.java:206)] - Open website with URL: https://automationexercise.com/
+[INFO] 26-03-2024 11:32:46 [main] [com.automationexercise.Utilities.Utility.openWebsite(Utility.java:206)] - Open website with URL: https://automationexercise.com/signup
+[INFO] 26-03-2024 11:32:49 [main] [com.automationexercise.Pages.P01_RegisterPage.enterSignupInfo(P01_RegisterPage.java:171)] - Name: radwa
+[INFO] 26-03-2024 11:32:49 [main] [com.automationexercise.Pages.P01_RegisterPage.enterSignupInfo(P01_RegisterPage.java:173)] - Email: wa.nagib86@gmail.com
