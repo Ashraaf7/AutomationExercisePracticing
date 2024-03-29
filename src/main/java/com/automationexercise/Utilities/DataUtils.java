@@ -1,7 +1,9 @@
 package com.automationexercise.Utilities;
 
+import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
+import com.jayway.jsonpath.JsonPath;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
@@ -17,6 +19,18 @@ public class DataUtils {
     public final static String ENVIRONMENT_PATH = "src/test/resources/test-data/environment.properties";
 
     private DataUtils() {
+    }
+
+    //TODO: Read any field from json file
+    public static String getJsonValue(String jsonFilename, String field) {
+        try {
+            FileReader reader = new FileReader(TEST_DATA_PATH + jsonFilename + ".json");
+            Object jsonData = new Gson().fromJson(reader, Object.class);
+            return JsonPath.read(jsonData, "$." + field);
+        } catch (Exception e) {
+            LogUtils.error(e.getMessage());
+            return ""; // Return empty string in case of any exception
+        }
     }
 
     //TODO: Read data from json file

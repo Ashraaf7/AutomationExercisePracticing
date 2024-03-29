@@ -12,8 +12,7 @@ public class P02_HomePage {
     private final WebDriver driver;
 
     private final By ProductButton = By.xpath("//a[@href=\"/products\"]");
-    private final By iFrameElement = By.cssSelector("[id=\"aswift_6\"]");
-    private final By adButton = By.cssSelector("[id=\"dismiss-button\"]");
+
     //  Test Case 25: Verify Scroll Up using 'Arrow' button and Scroll Down functionality
     private final By SubscriptionText = By.xpath("//h2[contains(text(),'Subscription')]");
     private final By ScrollUpButton = By.cssSelector("[id=\"scrollUp\"]");
@@ -23,16 +22,6 @@ public class P02_HomePage {
         this.driver = driver;
     }
 
-    public void ADS() {
-        try {
-            driver.switchTo().frame(findWebElement(driver, iFrameElement));
-            if (verifyElementVisible(adButton))
-                clicking(driver, adButton);
-            LogUtils.info("Ad button clicked");
-        } catch (Exception e) {
-            LogUtils.error("Cannot click on ads");
-        }
-    }
 
     /**
      * This method is used to click on the products button on the home page
@@ -40,6 +29,7 @@ public class P02_HomePage {
     public P03_SearchProductPage pressProductsButton() {
         clicking(driver, ProductButton);
         LogUtils.info("Clicked on product button");
+        P_AdPage.closeAdByRefreshing(ProductButton);
         return new P03_SearchProductPage(driver);
     }
 
