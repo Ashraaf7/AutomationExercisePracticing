@@ -1,0 +1,5 @@
+[INFO] 28-03-2024 21:18:12 [main] [com.automationexercise.Utilities.Utility.openWebsite(Utility.java:206)] - Open website with URL: https://automationexercise.com/
+[INFO] 28-03-2024 21:18:12 [main] [com.automationexercise.Utilities.Utility.verifyElementVisible(Utility.java:88)] - Verify element visible By.xpath: //h2[contains(text(),'Subscription')]
+[INFO] 28-03-2024 21:18:12 [main] [com.automationexercise.Pages.P02_HomePage.verifyScrollDown(P02_HomePage.java:48)] - SubscriptionText:SUBSCRIPTION
+[INFO] 28-03-2024 21:18:13 [main] [com.automationexercise.Utilities.Utility.verifyElementVisible(Utility.java:88)] - Verify element visible By.cssSelector: div[class='item active'] div[class='col-sm-6'] h2
+[INFO] 28-03-2024 21:18:13 [main] [com.automationexercise.Pages.P02_HomePage.verifyScrollUp(P02_HomePage.java:65)] - HeaderText:Full-Fledged practice website for Automation Engineers

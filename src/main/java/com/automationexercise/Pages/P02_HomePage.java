@@ -29,7 +29,6 @@ public class P02_HomePage {
     public P03_SearchProductPage pressProductsButton() {
         clicking(driver, ProductButton);
         LogUtils.info("Clicked on product button");
-        P_AdPage.closeAdByRefreshing(ProductButton);
         return new P03_SearchProductPage(driver);
     }
 
