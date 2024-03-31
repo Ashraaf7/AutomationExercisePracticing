@@ -1,6 +1,7 @@
 package com.automationexercise.Utilities;
 
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -204,4 +205,32 @@ public class Utility {
         getDriver().get(URL);
         LogUtils.info("Open website with URL: " + URL);
     }
+
+    /**
+     * Replace a substring with another substring
+     * @param "fullString" contains a mix of characters and numbers,
+     *        "oldChar" The substring within fullString that needs to be replaced,
+     *        "newChar"  substring that will replace each occurrence of oldChar
+     * @return  new String that results from replacing all occurrences of oldChar in fullString with newChar
+     */
+    public static String replacingTextOnString(String fullString, String oldChar, String newChar) {
+        return fullString.replace(oldChar, newChar);
+    }
+
+    /**
+     * Convert a string containing float number into a pure float number
+     * @param "text" containing the float number
+     * @return  pure float number
+     */
+    public static float convertStringToFloat(String text) {
+        return Float.parseFloat(text);
+    }
+    /*
+    * @brief Hover on an element
+    * */
+    public static void hoverOnElement(WebDriver driver, By locator){
+        WaitsUtils.explicitlyWaitForVisibility(driver,locator);
+        new Actions(getDriver()).moveToElement(driver.findElement(locator)).perform();
+    }
+
 }
