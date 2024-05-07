@@ -1,0 +1,2 @@
+[INFO] 20-03-2024 10:30:15 [main] [com.automationexercise.Utilities.Utility.openWebsite(Utility.java:201)] - Open website with URL: https://automationexercise.com/
+[INFO] 20-03-2024 10:30:15 [main] [com.automationexercise.Utilities.Utility.verifyElementVisible(Utility.java:83)] - Verify element visible By.xpath: //*[@id="header"]/div/div/div/div[1]/div/a/img
